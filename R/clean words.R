@@ -2,12 +2,15 @@
 #'
 #' Removes numeric characters, stop words and white space from words...
 #'
-#' @name clean_words
+#' @name clean_text
+#' @param df Takes df with
 #' @return Returns data frame
 #' @export
 
 
-clean_words <- function(df) {
+clean_text <- function(df, var.) {
+  var. <- enquo()
+
   df %>%
     mutate(word = str_replace_all(word, c("(0|[1-9][0-9]*)" = "",
                                         "," = "",

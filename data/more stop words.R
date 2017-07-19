@@ -1,5 +1,5 @@
 
-more_stop_words <- tibble(word = c(
+more_stop_words <- tibble::tibble(word = c(
   "it’s",
   "people",
   "that’s",
