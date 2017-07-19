@@ -1,7 +1,7 @@
 #' Add speaker categorical variable
 #'
 #' Mutates variable \code{"speaker."} to either \code{"jorn"} or \code{"pm"}.
-#'
+#' Also removes the sentences that are \code{"JOURNALIST:"} and \code{"PRIME MINISTER:"}.
 #'
 #' @name clean_text
 #' @param df Takes df with sentence level text.
@@ -20,7 +20,8 @@ add_speaker <- function(df, keep = T) {
   df <- df %>%
     fill(speaker.) %>%
     mutate(speaker. = case_when(is.na(speaker.) ~ "pm",
-                                !is.na(speaker.) ~ speaker.))
+                                !is.na(speaker.) ~ speaker.)) %>%
+    filter(!sent %in% c("JOURNALIST:", "PRIME MINISTER:"))
 
   if (keep){
     df

@@ -3,3 +3,4 @@
 export(add_speaker)
 export(clean_text)
 export(fetch_sentences)
+export(sent_to_words)
