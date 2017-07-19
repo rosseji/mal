@@ -8,7 +8,7 @@
 \usage{
 add_speaker(df, keep = T)
 
-clean_text(df, var.)
+clean_text(df)
 }
 \arguments{
 \item{df}{Takes df with sentence level text.}
@@ -24,6 +24,7 @@ Returns data frame
 }
 \description{
 Mutates variable \code{"speaker."} to either \code{"jorn"} or \code{"pm"}.
+Also removes the sentences that are \code{"JOURNALIST:"} and \code{"PRIME MINISTER:"}.
 
 Removes numeric characters, stop words and white space from words...
 }

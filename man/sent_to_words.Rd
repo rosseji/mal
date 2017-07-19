@@ -4,12 +4,12 @@
 \alias{sent_to_words}
 \title{Convert sentence stings to words}
 \usage{
-sent_to_words(df, remove_jorn = T)
+sent_to_words(df, keep_jorn = F)
 }
 \arguments{
 \item{df}{Takes df with}
 
-\item{remove_jorn}{Defaults to TRUE, filters out "jorn" speaker.}
+\item{keep_jorn}{Defaults to FALSE, filters out "jorn" speaker.}
 }
 \value{
 Returns data frame
